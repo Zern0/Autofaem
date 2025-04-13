@@ -1,5 +1,5 @@
 ﻿--////////////////////////////////////////////////////////
---             ЛОКАЛЬНЫЙ СКРИПТ: "Зерно хаб (Modified)"
+--             ЛОКАЛЬНЫЙ СКРИПТ: "Зерно хаб"
 --////////////////////////////////////////////////////////
 
 local Players = game:GetService("Players")
@@ -23,7 +23,7 @@ mainFrame.Size = UDim2.new(0, 320, 0, 390)
 mainFrame.Position = UDim2.new(0.05, 0, 0.1, 0)
 mainFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 mainFrame.BorderSizePixel = 2
-mainFrame.Visible = false  -- по умолчанию скрыто, открывать клавишей [K]
+mainFrame.Visible = true  -- по умолчанию открыто, скрывать клавишей [K]
 mainFrame.Active = true
 mainFrame.Selectable = true
 mainFrame.Parent = screenGui
@@ -47,7 +47,7 @@ footerLabel.BackgroundTransparency = 1
 footerLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 footerLabel.Font = Enum.Font.SourceSansSemibold
 footerLabel.TextSize = 16
-footerLabel.Text = "By Zern0"
+footerLabel.Text = "By Zern0(aka Zevr1)"
 footerLabel.Parent = mainFrame
 
 -- Прокручиваемая область для кнопок
@@ -253,7 +253,7 @@ local function AdminCheck_Enable()
     AdminCheck_Connection = Players.PlayerAdded:Connect(function(plr)
         if not AdminCheck_Enabled then return end
         if AdminList[plr.Name] then
-            LocalPlayer:Kick("Detected Nigger") -- Исходная формулировка автора
+            LocalPlayer:Kick("Detected Admin(s)") -- Исходная формулировка автора
             task.wait(2)
             game:Shutdown()
         end
@@ -437,7 +437,7 @@ end
 
 --======================= Teleport Farm =========================--
 local TPFarm_Enabled = false
-local TPFarm_TargetName = "h4rtbrkrW"
+local TPFarm_TargetName = "Temas964" -- Ник автора кода (меня)
 
 -- Сохраняем все подключения, чтобы отключать при Disable
 local TPFarm_SteppedConnection = nil
